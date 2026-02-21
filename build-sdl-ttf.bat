@@ -3,6 +3,7 @@ set REPO_PATH=..\..\..\SDL_ttf
 rem Set linker flags to produce PDB with Release build type
 rem This is preferable to RelWithDebInfo. See https://gitlab.kitware.com/cmake/cmake/-/issues/20812
 set CFLAGS=/O2 /DNDEBUG /Zi /Gy
+set CXXFLAGS=/O2 /DNDEBUG /Zi /Gy
 set LDFLAGS=/DEBUG:FULL /OPT:REF /OPT:ICF
 
 rem Enable security mitigations

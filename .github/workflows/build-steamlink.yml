@@ -14,13 +14,13 @@ jobs:
 
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         with:
           submodules: 'recursive'
           fetch-depth: 1
 
       - name: Checkout Steam Link SDK
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         with:
           repository: ValveSoftware/steamlink-sdk
           path: steamlink-sdk
@@ -37,7 +37,7 @@ jobs:
           ./archive-steamlink.sh
 
       - name: Upload Artifacts
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: steamlink
           path: |

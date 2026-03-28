@@ -39,10 +39,11 @@ jobs:
 
     env:
       MACOS_MIN: ${{ matrix.macos_min }}
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           submodules: 'recursive'
           fetch-depth: 1
@@ -264,7 +265,7 @@ jobs:
           ./archive.sh
 
       - name: Upload Artifacts
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: ${{ runner.os }}-${{ matrix.msbuild_platform || 'universal' }}
           path: |

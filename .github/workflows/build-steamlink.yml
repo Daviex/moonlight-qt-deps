@@ -1,9 +1,9 @@
 name: Build Steam Link
+permissions:
+  contents: read
 
 on:
-  push:
-  pull_request:
-    branches: [ "main" ]
+  workflow_call:
 
 jobs:
   build:

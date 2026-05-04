@@ -268,7 +268,5 @@ jobs:
         uses: actions/upload-artifact@v6
         with:
           name: ${{ runner.os }}-${{ matrix.msbuild_platform || 'universal' }}
-          path: |
-            windows-*.zip
-            macos.zip
+          path: output/
           if-no-files-found: error

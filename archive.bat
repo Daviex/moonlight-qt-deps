@@ -33,5 +33,3 @@ copy build\openssl\build_%1\lib\*.lib output\lib\%1
 copy build\openssl\build_%1\bin\lib*.dll output\lib\%1
 copy build\openssl\build_%1\bin\lib*.pdb output\lib\%1
 copy Detours\lib.%1\detours.* output\lib\%1
-
-7z a windows-%1.zip .\output\*

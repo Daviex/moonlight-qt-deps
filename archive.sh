@@ -26,5 +26,3 @@ lipo build/FFmpeg/build_*/lib/libavutil.60.dylib -create -o output/lib/libavutil
 lipo build/FFmpeg/build_*/lib/libswscale.9.dylib -create -o output/lib/libswscale.9.dylib
 
 lipo -info output/lib/*
-
-7z a macos.zip ./output/*
